@@ -1,0 +1,34 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import newToFlying from "../data/new-to-flying";
+import Features from "../components/Features.astro";
+import TryFlyingCTA from "../components/TryFlyingCTA.astro";
+import HeaderScreen from "../components/HeaderScreen.astro";
+import WhyPilot from "../components/WhyPilot.astro";
+import IntroFlightTestimonials from "../components/IntroFlightTestimonials.astro";
+import QuizCTA from "../components/QuizCTA.astro";
+import BookDownload from "../components/BookDownload.astro";
+
+const { data } = newToFlying;
+---
+
+<BaseLayout
+  siteTitle={data.pageTitle}
+  siteDescription={data.pageDescription}
+  keywords={data.pageKeywords}
+>
+  <HeaderScreen content={data.header} />
+
+  <WhyPilot content={data.whyPilot} />
+
+  <BookDownload />
+
+  <Features content={data.features} />
+
+  <TryFlyingCTA content={data.discoveryCTA} />
+
+  <IntroFlightTestimonials content={data.testimonials} />
+
+  <QuizCTA content={data.quizCTA} />
+</BaseLayout>
+<script src="../scripts/SliderOnePerView.js"></script>

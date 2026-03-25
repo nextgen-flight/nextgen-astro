@@ -1,0 +1,48 @@
+---
+import ProgramCard from "./ProgramCard.astro";
+
+const { content } = Astro.props;
+---
+
+<section class="bg-gray-50 py-16 lg:py-24 overflow-hidden">
+  <div class="mb-12">
+    {
+      content.upperHeading && (
+        <h2 class="text-xl font-sans text-center uppercase font-semibold tracking-tight text-primary">
+          {content.upperHeading}
+        </h2>
+      )
+    }
+    {
+      content.heading && (
+        <h2 class="text-5xl lg:text-6xl font-sans text-center font-bold tracking-tight text-gray-800">
+          {content.heading}
+        </h2>
+      )
+    }
+  </div>
+  <div class="slider-row">
+    <div class="swiper creativeSwiper magic-cursor w-full h-full">
+      <div class="swiper-wrapper pb-8">
+        {
+          content.cards.map((program) => (
+            <div class="swiper-slide">
+              <ProgramCard
+                title={program.title}
+                imagePath={program.imagePath}
+                imageAlt={program.imageAlt}
+                link={program.link}
+                description={program.description}
+              />
+            </div>
+          ))
+        }
+      </div>
+      <div class="hidden lg:block">
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </div>
+</section>
