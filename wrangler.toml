@@ -1,4 +1,3 @@
 name = "nextgen-astro"
 
-[pages]
-project_name = "nextgen-astro"
+pages_build_output_dir = "dist"
