@@ -67,7 +67,7 @@ const RentalModalButton = ({
         }),
       ]);
 
-      if (ghlRes.ok && portalRes.ok) {
+      if (ghlRes.ok) {
         setFormSubmitted(true);
         setTimeout(() => {
           toggleModal();
@@ -76,7 +76,6 @@ const RentalModalButton = ({
       } else {
         console.error("Submission failed", {
           ghlStatus: ghlRes.status,
-          portalStatus: portalRes.status,
         });
       }
     } catch (err) {
