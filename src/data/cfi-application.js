@@ -85,7 +85,7 @@ const cfiApplication = {
     contentThreeImageCaption: "",
     contentThreeH3: "Ready to Get Started?",
     contentThreeParagraphs: [
-      "Complete the application form below and our admissions team will contact you to guide you through the next steps.",
+      "Complete the application form below, and our admissions team will contact you to guide you through the next steps.",
       "We look forward to helping you achieve your instructor certification and take your aviation career to the next level.",
     ],
     contentThreeButtonText: "Apply Now",
