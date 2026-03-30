@@ -59,7 +59,7 @@ const BookModalButton = ({
         }),
       ]);
 
-      if (ghlRes.ok && portalRes.ok) {
+      if (ghlRes.ok) {
         setFormSubmitted(true);
         setTimeout(() => {
           toggleModal();
@@ -68,7 +68,6 @@ const BookModalButton = ({
       } else {
         console.error("Submission failed", {
           ghlStatus: ghlRes.status,
-          portalStatus: portalRes.status,
         });
       }
     } catch (err) {
