@@ -7,3 +7,9 @@ src/.DS_Store
 .DS_Store
 src/.DS_Store
 .astro
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example

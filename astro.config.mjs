@@ -6,15 +6,19 @@ import react from "@astrojs/react";
 
 import partytown from "@astrojs/partytown";
 
+import cloudflare from "@astrojs/cloudflare";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://flyhere.aero/",
+
   vite: {
     build: {
       cssCodeSplit: true,
       minify: true,
     },
   },
+
   integrations: [
     mdx(),
     sitemap({
@@ -75,7 +79,10 @@ export default defineConfig({
     react(),
     partytown(),
   ],
+
   redirects: {
     // View previous sitemap and Google Search Console and place redirects from old routes to new routes here
   },
+
+  adapter: cloudflare()
 });
